@@ -40,7 +40,7 @@ const Car = Ember.Object.extend({
   },
   totalPrice: Ember.computed('orders', function() {
     return this.get('orders').reduce(function (sum, order) {
-      sum += order.get('orderPrice');
+      return sum += order.get('orderPrice');
     },0);
   })
 })
